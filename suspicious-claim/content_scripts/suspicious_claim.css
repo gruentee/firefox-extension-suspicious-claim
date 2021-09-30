@@ -1,0 +1,42 @@
+.example body {
+    font-family: Literata, Georgia, Helvetica, serif;
+    text-align: justify;
+}
+
+.example h1,
+.example h2,
+.example h3,
+.example h4 {
+    font-family: "Lato Heavy", Roboto, sans-serif;
+    border-bottom: 1px dotted black;
+}
+
+.btn-classify {
+    display: inline-block;
+    border: 1px solid salmon;
+    border-radius: 0.35em;
+    padding: .25em 1em;
+    cursor: pointer;
+    font-variant: common-ligatures all-small-caps;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: lightblue;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.highlight {
+    /*background-color: rgba(255, 99, 71, 0.7);*/
+    /*padding: 0 0.2rem;*/
+    font-style: inherit;
+    /*border-radius: 5px;*/
+}
+.highlight.supported {
+    background-color: rgba(50, 205, 50, 0.4);
+}
+.highlight.refuted {
+    background-color: rgba(255, 99, 71, 0.4);
+}
+.highlight.nei {
+    background-color: rgba(173, 216, 230, 0.4); /*#C2AE12;*/
+}

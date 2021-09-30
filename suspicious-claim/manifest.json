@@ -1,0 +1,46 @@
+{
+
+  "manifest_version": 2,
+  "name": "Suspicious Claim Highlighter",
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "56.0a1"
+    }
+  },
+  "description": "Provides the user with the possibility to send text to a machine learning classifier in order to predict whether a claim might be supported or refuted.",
+  "homepage_url": "https://websolutions.koeln",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content_scripts/jquery-3.6.0.slim.min.js",
+        "content_scripts/mark.js_8.11.1_jquery.mark.js",
+        "content_scripts/claimHighlighter.js"
+      ],
+      "css": ["content_scripts/suspicious_claim.css"]
+    }
+  ],
+
+  "background": {
+    "scripts": [
+      "content_scripts/jquery-3.6.0.slim.min.js",
+      "content_scripts/mark.js_8.11.1_jquery.mark.js",
+      "background_scripts/menu.js"
+    ]
+  },
+  "icons": {
+    "16": "icons/brain-16.png",
+    "32": "icons/brain-32.png",
+    "48": "icons/brain-48.png"
+  },
+
+  "permissions": [
+    "menus",
+    "activeTab",
+    "*://localhost:5000/*"
+  ]
+
+}
+
